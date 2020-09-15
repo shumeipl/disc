@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  	<meta content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  				name="viewport">
+    <title>丰米</title>
+    <link href="./css/main.css" rel="stylesheet" />
+    <script type="text/javascript" src="./static/js/echarts.min.js"></script>
+    <script src="./static/js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="./static/js/jq.js"></script>
+    <script src="./static/js/utils.js"></script>
+  </head>
+  <body>
+    <div class="warp">
+      <div class="header clearfix">
+        <img class="header_img" src="./static/img/logo2.jpeg" alt="">
+        <span class="lang"></span>
+        <p class="online_data"></p>
+        <span class="tipsName"></span>
+
+      </div>
+
+      <div class="main stepOne step0">
+        <div class="content">
+          <h5 class="subtitle">基本信息</h5>
+          <div class="items">
+            <span class="items_spn name">*姓名</span>
+            <input class="items_ipt" type="text" name="" value="">
+          </div>
+          <div class="items">
+            <span class="items_spn tel">*手机</span>
+            <input class="items_ipt" type="tel" name="" value="">
+          </div>
+          <div class="items">
+            <span class="items_spn gender">性别</span>
+            <label class="items_lab clearfix" for="xixi12"> <span class="male">男</span> <input type="radio" id="xixi12" name="xix" value="1"></label>
+            <label class="items_lab items_lab2 clearfix" for="xixi32"> <span class="female">女</span> <input type="radio" id="xixi32" name="xix" value="0"></label>
+          </div>
+          <div class="items">
+            <span class="items_spn email">邮箱</span>
+            <input class="items_ipt" type="email" name="" value="">
+          </div>
+          <div class="items">
+            <span class="items_spn birthday">生日</span>
+            <input class="items_ipt" id="birthday" type="phone" name="" value="">
+          </div>
+          <div class="items">
+            <span class="items_spn education">学历</span>
+            <input class="items_ipt" type="phone" name="" value="">
+          </div>
+          <div class="items">
+            <span class="items_spn nationality">国籍</span>
+            <input class="items_ipt" type="phone" name="" value="">
+          </div>
+          <div class="items">
+            <span class="items_spn paypalAccount">Paypal账户</span>
+            <input class="items_ipt" type="phone" name="" value="">
+          </div>
+          <div class="items">
+            <span class="items_spn avstva">照片</span>
+            <!-- <input class="items_ipt" type="phone" name="" value=""> -->
+
+            <div class="avstvaBox">
+              <input id="uploadimg" type="file" accept="image/jpg,image/jpeg,image/png" name="" class="items_file" value="">
+              <img id="img" src="" alt="">
+              <p>点击上传</p>
+            </div>
+          </div>
+          <h5> <b class="h5_1">教育经历</b> <span class="addjy">添加</span> </h5>
+
+          <div class="schoolWarp">
+
+          </div>
+
+          <h5><b class="h5_2">工作经历</b>  <span class="addgz">添加</span> </h5>
+
+          <div class="workWarp">
+
+          </div>
+          <h5><b class="h5_3">薪酬</b> </h5>
+
+          <div class="items">
+            <span class="items_spn expectation">*期望薪资/月</span>
+            <input style="width:88%;" class="items_ipt" type="phone" name="" value="">
+          </div>
+          <div class="items">
+            <span class="items_spn motivation">*离职原因</span>
+            <input style="width:88%;"  class="items_ipt" type="phone" name="" value="">
+          </div>
+          <div class="items">
+            <span class="items_spn language">*语言能力</span>
+            <textarea style="width:88%;"  class="items_ipt" name="name" rows="8" cols="80"></textarea>
+          </div>
+
+          <div class="items itemsBtn">
+            <button class="nextBtn" type="button" name="button">下一步</button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="main stepTwo step1">
+        <div class="content">
+          <div class="subtxt01">
+            <p class="p0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在每一个大标题中的四个选择题中只选择一个最符合你自己的，并在英文字母后面做记号。一共40题。不能遗漏。</p>
+            <p class="p1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注意：请按第一印象最快的选择，如果不能确定，可回忆童年时的情况，或者以你最熟悉的人对你的评价来从中选择。</p>
+          </div>
+          <div class="item">
+            <div class="items clearfix">
+              <span class="subTitle">一、</span>
+              <div class="submain">
+                <label for="txt1">A、富于冒险:愿意面对新事物并敢于下决心掌握的人 <input id="txt1" type="radio" name="s" value="">  </label>
+                <label for="txt2">B、适应力强:轻松自如适应任何环境 <input id="txt2" type="radio" name="s" value="">  </label>
+                <label for="txt3">C、生动:充满活力,表情生动,多手势 <input id="txt3" type="radio" name="s" value="">  </label>
+                <label for="txt4">D、善于分析:喜欢研究各部分之间的逻辑和正确的关系 <input id="txt4" type="radio" name="s" value="">  </label>
+              </div>
+            </div>
+            <div class="items clearfix">
+              <span class="subTitle">二、</span>
+              <div class="submain">
+                <label for="stxt1">A、富于冒险:愿意面对新事物并敢于下决心掌握的人 <input id="stxt1" type="radio" name="ss" value="">  </label>
+                <label for="stxt2">B、音乐性：爱好参与并有较深的鉴赏能力，因音乐的艺术性,而不是因为表演的乐趣 <input id="stxt2" type="radio" name="ss" value="">  </label>
+                <label for="stxt3">C、生动:充满活力,表情生动,多手势 <input id="stxt3" type="radio" name="ss" value="">  </label>
+                <label for="stxt4">D、善于分析:喜欢研究各部分之间的逻辑和正确的关系 <input id="stxt4" type="radio" name="ss" value="">  </label>
+              </div>
+            </div>
+          </div>
+          <div class="items itemsBtn">
+            <button class="nextBtn" type="button" name="button"></button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="main echart">
+        <div class="content">
+
+            <div id="main"></div>
+            <div class="subtxt01">
+              <!-- <p>20世纪20年代，美国心理学家威廉•莫尔顿•马斯顿创建了一个理论来解释人的情绪反应，在此之前，这种工作主要局限在对于精神病患者或精神失常人群的研究，而马斯顿博士则希望扩大这个研究范围，以运用于心理健康的普通人群，因此，马斯顿博士将他的理论构建为一个体系，即―TheEmotionsofNormalPeople“正常人的情绪”。</p>
+              <p>为了检验他的理论，马斯顿博士需要采用某种心理测评的方式来衡量人群的情绪反映－“人格特征”，因此，他采用了四个他认为是非常典型的人格特质因子，即Dominance－支配，Influence－影响，Steady－稳健，以及Compliance－服从。而DISC，正是代表了这四个英文单词的首字母。在1928年，马斯顿博士正是在他的“正常人的情绪”一书中，提出了DISC测评，以及理论说明。</p>
+              <p>目前，DISC理论已被广泛应用于世界500强企业的人才招聘，历史悠久、专业性强、权威性高。</p> -->
+              <!-- <p>测试结果的使用说明：</p>
+              <p>计算你的各项得分，超过10分称为显性因子，可以作为性格测评的判断依据。低于10分称为隐性因子，对性格测评没有实际指导意义，可以忽略。如果有两项及以上得分超过10,说明你同时具备那两项特征。</p> -->
+              <p class="t1">Dominance－支配型/控制者</p>
+              <!-- <p>高D型特质的人可以称为是“天生的领袖”。
+                </br>在情感方面，D型人一个坚定果敢的人，酷好变化，喜欢控制，干劲十足，独立自主，超级自信。可是，由于比较不会顾及别人的感受，所以显得粗鲁、霸道、没有耐心、穷追不舍、不会放松。D型人不习惯与别人进行感情上的交流，不会恭维人，不喜欢眼泪，匮乏同情心。
+                </br>在工作方面，D型人是一个务实和讲究效率的人，目标明确，眼光全面，组织力强，行动迅速，解决问题不过夜，果敢坚持到底，在反对声中成长。但是，因为过于强调结果， D型人往往容易忽视细节，处理问题不够细致。爱管人、喜欢支使他人的特点使得D型人能够带动团队进步，但也容易激起同事的反感。
+                </br>在人际关系方面， D型人喜欢为别人做主，虽然这样能够帮助别人做出选择，但也容易让人有强迫感。由于关注自己的目标， D型人在乎的是别人的可利用价值。喜欢控制别人，不会说对不起。
+                </br>代表人物：普京、拿破仑、曹操、孙悟空
+                </br>描述性词语：积级进取、争强好胜、强势、爱追根究底、直截了当、主动的开拓者、坚持意见、自信、直率
+              </p> -->
+              <p class="t1">Influence－互动型/社交者</p>
+              <!-- <p>
+                高I型的人通常是较为活泼的团队活动组织者
+                </br>I型人是一个情感丰富而外露的人，由于性格活跃，爱说，爱讲故事，幽默，彩色记忆，能抓住听众，你常常是聚会的中心人物。是一个天才的演员，天真无邪，热情诚挚，喜欢送礼和接受礼物，看重人缘。情绪化的特点使得你容易兴奋，喜欢吹牛、说大话，天真，永远长不大，富有喜剧色彩。但是，似乎也很容易生气，爱抱怨，大嗓门，不成熟。
+                </br>在工作方面，I型人是一个热情的推动者，总有新主意，色彩丰富，说干就干，能够鼓励和带领他人一起积极投入工作。可是，I型人似乎总是情绪决定一切，想哪儿说哪儿，而且说得多干得少，遇到困难容易失去信心，杂乱无章，做事不彻底，爱走神儿，爱找借口。喜欢轻松友好的环境，非常害怕被拒绝。
+                </br>在人际关系方面，I型人容易交上朋友，朋友也多。关爱朋友，也被朋友称赞。爱当主角，爱受欢迎喜欢控制谈话内容。可是，喜欢即兴表演的特点使得I型人常常不能仔细理解别人，而且健忘多变。
+                </br>代表人物：克林顿、刘备、猪八戒
+                </br>描述性词语：有影响力、有说服力、友好、善于言辞、健谈、乐观积极、善于交际
+              </p> -->
+              <p class="t1">Compliance－完美型/思考者</p>
+              <!-- <p>
+                高S型的人通常较为平和，知足常乐，不愿意主动前进
+                </br>在情感方面，S型人是一个温和主义者，悠闲，平和，有耐心，感情内藏，待人和蔼，乐于倾听，遇事冷静，随遇而安。 S型喜欢使用一句口头禅：“不过如此。”这个特点使得S型总是缺乏热情，不愿改变。
+                </br>在工作方面， S型能够按部就班地管理事务，胜任工作并能够持之以恒。奉行中庸之道，平和可亲，一方面习惯于避免冲突，另一方面也能处变不惊。但是， S型似乎总是慢吞吞的，很难被鼓动，懒惰，马虎，得过且过。由于害怕承担风险和责任，宁愿站在一边旁观。很多时候， S型总是焉有主意，有话不说，或折衷处理。
+                </br>在人际关系方面， S型是一个容易相处的人，喜欢观察人、琢磨人，乐于倾听，愿意支持。可是，由于不以为然， S型也可能显得漠不关心，或者嘲讽别人。
+                </br>代表人物：甘地、鲁肃、沙僧
+                </br>描述性词语：可靠、深思熟虑、亲切友好、有毅力、坚持不懈、善倾听者、全面周到、自制力强
+              </p> -->
+              <p class="t1">Steadiness－稳定型/支持者</p>
+              <!-- <p>
+                高C型的人通常是喜欢追求完美的专业型人才
+                </br>在情感方面，C型人是一个性格深沉的人，严肃认真，目的性强，善于分析，愿意思考人生与工作的意义，喜欢美丽，对他人敏感，理想主义。但是， C型人总是习惯于记住负面的东西，容易情绪低落，过分自我反省，自我贬低，离群索居，有忧郁症倾向。
+                </br>在工作方面， C型人是一个完美主义者，高标准，计划性强，注重细节，讲究条理，整洁，能够发现问题并制订解决问题的办法，喜欢图表和清单，坚持己见，善始善终。但是， C型人也很可能是一个优柔寡断的人，习惯于收集信息资料和做分析，却很难投入到实际运作的工作中来。容易自我否定，因此需要别人的认同。同时，也习惯于挑剔别人，不能忍受别人的工作做不好。
+                </br>对待人际关系方面， C型人一方面在寻找理想伙伴，另一方面却交友谨慎。能够深切地关怀他人，善于倾听抱怨，帮助别人解决困难。但是， C型人似乎始终有一种不安全感，以致于感情内向，退缩，怀疑别人，喜欢批评人事，却不喜欢别人的反对。
+                </br>代表人物：比尔盖茨、诸葛亮、唐僧
+                </br>描述性词语：遵从、仔细、有条不紊、严谨、准确、完美主义者、逻辑性强
+              </p> -->
+            </div>
+        </div>
+
+      </div>
+
+      <div class="main loading">
+        <img src="./static/img/0147d85b320ba0a80120b959abcc40.gif" alt="">
+      </div>
+    </div>
+    <a href="" id="scrollBtn" style="display:none;"></a>
+    <div class="dalog schoolwarp">
+      <div class="content">
+        <h5 class="subtitle"></h5>
+        <div class="items">
+          <span class="items_spn school">*学校名称</span>
+          <input class="items_ipt" type="text" name="" value="">
+        </div>
+        <div class="items">
+          <span class="items_spn education">*学历</span>
+          <input class="items_ipt" type="text" name="" value="">
+        </div>
+        <div class="items">
+          <span class="items_spn sTimes">在校时间</span>
+          <input class="items_ipt" id="sTime" type="phone" name="" placeholder="" value="">
+        </div>
+
+        <div class="items" style="text-align: center;">
+          <span class="items_spn eTimes"></span>
+            -
+        </div>
+        <div class="items">
+          <span class="items_spn eTimes"></span>
+          <input class="items_ipt" id="eTime" type="phone" name="" placeholder="" value="">
+        </div>
+        <div class="items">
+          <span class="items_spn profession">专业名称</span>
+          <input class="items_ipt" type="text" name="" value="">
+        </div>
+        <div class="items itemsBtn">
+          <button class="nextBtn submint" type="button" name="button">保存</button>
+          <button class="nextBtn cancel" type="button" name="button">取消</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="dalog working">
+      <div class="content">
+        <h5 class="subtitle"></h5>
+        <div class="items">
+          <span class="items_spn company">*公司名称</span>
+          <input class="items_ipt" type="text" name="" value="">
+        </div>
+        <div class="items">
+          <span class="items_spn title">*职位</span>
+          <input class="items_ipt" type="text" name="" value="">
+        </div>
+        <div class="items">
+          <span class="items_spn department">*部门</span>
+          <input class="items_ipt" type="text" name="" value="">
+        </div>
+        <div class="items">
+          <span class="items_spn s_company">*入职时间</span>
+          <input class="items_ipt" id="e_sTime" type="phone" name="" placeholder="" value="">
+        </div>
+        <div class="items" style="text-align: center;">
+          <span class="items_spn eTimes"></span>
+            -
+        </div>
+        <div class="items">
+          <span class="items_spn e_company"></span>
+          <input class="items_ipt" id="e_eTime" type="phone" name="" placeholder="" value="">
+        </div>
+        <div class="items">
+          <span class="items_spn Report">报告对象</span>
+          <input class="items_ipt" type="text" name="" value="">
+        </div>
+        <div class="items">
+          <span class="items_spn subordinates">下属</span>
+          <input class="items_ipt" type="text" name="" value="">
+        </div>
+        <div class="items">
+          <span class="items_spn responsibilities">*职责</span>
+          <!-- <input class="items_ipt" type="text" name="" value=""> -->
+          <textarea class="items_ipt" name="name" rows="8" cols="80"></textarea>
+        </div>
+
+        <div class="items itemsBtn">
+          <button class="nextBtn submit" type="button" name="button">保存</button>
+          <button class="nextBtn cancel" type="button" name="button">取消</button>
+        </div>
+
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+
+  (function(){
+    "use strict";
+    var langVal = 'zh';
+    var step = 0;
+    var langData = {};
+    var schoolData = [];
+    var ajaxSendata = {
+      schoolData: [],
+      working:[]
+    };
+    var initDoc = runOnce(function(){
+      langVal = 'zh';
+      step = 0;
+      setDomTxt(getLangData(langVal));
+      // setEcharts({c: 3,
+      //   d: 8,
+      //   i: 2,
+      //   name: "sad",
+      //   s: 4});
+      bindEvent();
+      laydate.render({
+        elem: '#birthday'
+        ,theme: '#f18b09'
+      });
+      laydate.render({
+        elem: '#eTime'
+        ,theme: '#f18b09'
+      });
+      laydate.render({
+        elem: '#sTime'
+        ,theme: '#f18b09'
+      });
+      laydate.render({
+        elem: '#e_eTime'
+        ,theme: '#f18b09'
+      });
+      laydate.render({
+        elem: '#e_sTime'
+        ,theme: '#f18b09'
+      });
+    });
+    var onlyinitEcharts = runOnce(initEcharts);
+    function initStepTwoDoc(arr){
+      var labehtml = '<label class="clearfix" for="LABELFOR"><p>CONTEXT</p><input id="IPTID" type="radio" name="NAMEVAL" value="SELECTVALUE">  </label>';
+      var boxHtml = '<div class="items clearfix" id="ITEMSID"><span class="subTitle">STEPNUM、</span><div class="submain">BOXCONENTER</div></div>';
+      var html = '';
+      arr.forEach(function(el ,idx){
+        var strHtml = '';
+        el.forEach(function(ele, index){
+          strHtml += labehtml.replace('LABELFOR','label'+(idx+''+index))
+                         .replace('IPTID','label'+(idx+''+index))
+                         .replace('NAMEVAL',idx)
+                         .replace('SELECTVALUE',index)
+                         .replace('CONTEXT',ele);
+        });
+        html += boxHtml.replace('STEPNUM',(idx+1))
+                       .replace('BOXCONENTER',strHtml)
+                       .replace('ITEMSID','ITEMSID'+idx);
+      })
+      return html;
+    }
+    function setDomTxt(data){
+      langData = data;
+      $('.header .lang').text(data.lang);
+      $('.header .online_data').text(data['title'+step]);
+      $('.stepOne .subtitle').text(data.subtitle);
+      $('.stepOne .name').text(data.form.name);
+      $('.stepOne .gender').text(data.form.gender);
+      $('.stepOne .email').text(data.form.email);
+      $('.stepOne .tel').text(data.form.tel);
+      $('.stepOne .birthday').text(data.form.birthday);
+      $('.stepOne .education').text(data.form.education);
+      $('.stepOne .nationality').text(data.form.nationality);
+      $('.stepOne .paypalAccount').text(data.form.paypalAccount);
+      $('.stepOne .female').text(data.female);
+      $('.stepTwo .subtxt01 .p0').html('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+data.steptitletxt[0]);
+      $('.stepTwo .subtxt01 .p1').html('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+data.steptitletxt[1]);
+      $('.stepOne .male').text(data.male);
+      $('.stepOne .nextBtn').text(data.stepOneBtnTxt);
+      $('.stepTwo .nextBtn').text(data.stepTwoBtnTxt);
+      $('.stepOne .avstva').text(data.Avatar);
+      $('.stepOne .avstvaBox p').text(data.Avatartxt);
+      $('.stepOne .h5_1').text(data.educationQualifications);
+      $('.stepOne .addjy').text(data.educationAdd);
+      $('.stepOne .addgz').text(data.educationAdd);
+      $('.stepOne .h5_2').text(data.Working);
+      $('.stepOne .h5_3').text(data.curreny);
+      $('.stepOne .expectation').text(data.TotalPackage);
+      $('.stepOne .motivation').text(data.motivation);
+      $('.stepOne .language').text(data.language);
+      $('.schoolwarp .school').text(data.schoolName);
+      $('.schoolwarp .education').text(data.education);
+      $('.schoolwarp .sTimes').text(data.sTimes);
+      $('.schoolwarp .profession').text(data.profession);
+      $('.schoolwarp .submint').text(data.submint);
+      $('.schoolwarp .cancel').text(data.cancel);
+
+      $('.working .company').text(data.company);
+      $('.working .title').text(data.title);
+      $('.working .department').text(data.department);
+      $('.working .s_company').text(data.s_company);
+      $('.working .Report').text(data.Report);
+      $('.working .subordinates').text(data.subordinates);
+      $('.working .responsibilities').text(data.responsibilities);
+      $('.working .submit').text(data.submint);
+      $('.working .cancel').text(data.cancel);
+
+      $('.stepTwo .item').html(initStepTwoDoc(data.stepTwo));
+      setTimeout(function(){
+        showStep();
+        $('.stepTwo .nextBtn').click()
+      }, 500)
+    }
+    function setEcharts(res) {
+      var data = res.data;
+      $('.tipsName').text(res.insertId + '.'+ajaxSendata.name);
+      var data_list = [
+        {name: 'd',val:data.d - 0},
+        {name: 'i',val:data.i - 0},
+        {name: 's',val:data.s - 0},
+        {name: 'c',val:data.c - 0},
+      ];
+      // console.log(getMaxNum(data_list, 'val'))
+      onlyinitEcharts({
+        data:[data.d - 0, data.i - 0, data.s - 0, data.c - 0],
+        maxNum: getMaxNum(data_list, 'val'),
+        indicator: langData.stepTwoTitle
+      })
+    }
+    function showStep(name){
+
+      $('.main').hide();
+      if(step > 1) {
+        $('.tipsName').show();
+        $('.echart').show()
+      } else {
+        $('.tipsName').hide();
+        $('.step'+step).show()
+      };
+      $('.header .online_data').text(langData['title'+step]);
+    }
+
+    function bindEvent(){
+      function splitlanguage(str){
+        return str.split(';');
+      }
+      function scrollView(idx){
+        $('#scrollBtn').attr('href','#ITEMSID'+idx);
+        $('#scrollBtn').click();
+      }
+      $('#scrollBtn').click(function(){
+        var idName = $(this).attr('href');
+        $("html, body").animate({
+         scrollTop: $(idName).offset().top }, {duration: 500,easing: "swing"});
+         return false;
+      })
+      $('.header .lang').click(function(){
+        if(step > 1)return false;
+        $('.main').hide();
+        $('.loading').show();
+        if(langVal == 'zh')langVal = 'en';
+        else langVal = 'zh';
+        setDomTxt(getLangData(langVal));
+      });
+      $('.stepOne .nextBtn').click(function(){
+        var name = getSunlineTpIptVal($('.stepOne .name'));
+        var tel = getSunlineTpIptVal($('.stepOne .tel'));
+        var gender = $('.stepOne input:radio:checked').val();
+        var email = getSunlineTpIptVal($('.stepOne .email'));
+        var expectation = getSunlineTpIptVal($('.stepOne .expectation'));
+        var motivation = getSunlineTpIptVal($('.stepOne .motivation'));
+        var language = getSunlineTpIptVal($('.stepOne .language'));
+        if(!name)return layer.open({
+            content: langData.form.nameError,
+            skin: 'msg',
+            time: 3
+        });
+        if(!expectation)return layer.open({
+            content: langData.form.expectationError,
+            skin: 'msg',
+            time: 3
+        });
+        if(!motivation)return layer.open({
+            content: langData.form.motivationError,
+            skin: 'msg',
+            time: 3
+        });
+        if(!language)return layer.open({
+            content: langData.form.languageError,
+            skin: 'msg',
+            time: 3
+        });
+        if(!tel)return layer.open({
+            content: langData.form.telError,
+            skin: 'msg',
+            time: 3
+        });
+        if(!gender)return layer.open({
+            content: langData.form.gendererror,
+            skin: 'msg',
+            time: 3
+        });
+        if(!email)return layer.open({
+            content: langData.form.emailerror,
+            skin: 'msg',
+            time: 3
+        });
+        if(!ajaxSendata.hasOwnProperty('headerImg'))return layer.open({
+            content: langData.form.headererror,
+            skin: 'msg',
+            time: 3
+        });
+        ajaxSendata['expectation'] = expectation;
+        ajaxSendata['motivation'] = motivation;
+        ajaxSendata['language'] = splitlanguage(language);
+        ajaxSendata['name'] = name;
+        ajaxSendata['tel'] = tel;
+        ajaxSendata['gender'] = gender;
+        ajaxSendata['email'] = email
+        ajaxSendata['birthday'] = getSunlineTpIptVal($('.stepOne .birthday'));
+        ajaxSendata['education'] = getSunlineTpIptVal($('.stepOne .education'));
+        ajaxSendata['nationality'] = getSunlineTpIptVal($('.stepOne .nationality'));
+        ajaxSendata['paypalAccount'] = getSunlineTpIptVal($('.stepOne .paypalAccount'));
+        step = 1;
+        // showStep();
+        console.log(ajaxSendata)
+        $('.main').hide();
+        $('.loading').show();
+        ajaxSendata['disc'] = JSON.stringify(["3","2","3","2","1","3","3","0","2","3","2","2","3","3","2","1","3","0","2","3","1","1","2","3","0","2","2","1","2","2","2","1","2","2","3","3","1","1","2","2"]);
+        request(ajaxSendata, data => {
+
+            step = 2;
+            setEcharts(data);
+            // data.name+'--'
+            showStep();
+            console.log()
+          },err => {
+            layer.open({
+                content: err.message || '提交错误',
+                skin: 'msg',
+                time: 3
+            });
+        });
+      });
+      $('.stepTwo .nextBtn').click(function(){
+        var arrList = [];
+        var doms = $('.stepTwo .item .items')
+        for(var i = 0; i < doms.length; i++){
+          var asl = $(doms[i]).find('input:radio:checked').val();
+          if(!asl)return scrollView(i);
+          arrList.push(asl)
+        }
+        $('.main').hide();
+        $('.loading').show();
+        ajaxSendata['disc'] = JSON.stringify(arrList);
+        step = 2;
+        // ajaxSendata = {
+        //   schoolData: [
+        //     {
+        //       school: 'wqewq',
+        //       education: 'qweqwe',
+        //       sTimes: '2020-08-03',
+        //       eTime: '2020-08-08',
+        //       profession: 'qweqssa'
+        //     }
+        //   ],
+        //   working: [
+        //     {
+        //       company: 'wqewq',
+        //       title: 'qweqw',
+        //       e_sTime: '2020-08-07',
+        //       e_eTime: '2020-08-26',
+        //       department: 'qweqe',
+        //       responsibilities: 'wqewqe;qweqwe;fsfdsf;rtyryr;iugyufhj',
+        //       Report: 'adwqeqw',
+        //       subordinates: 'ada'
+        //     }
+        //   ],
+        //   headerImg: {
+        //     type: 'jpeg',
+        //     base64: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCABCAEIDASIAAhEBAxEB/8QAGwAAAgMBAQEAAAAAAAAAAAAAAAYDBAUCBwH/xAAxEAACAgECBAQDBwUAAAAAAAABAgADBAUREiExUQYTQXEjgaEUIjJSYXKRMzQ1wdH/xAAZAQEBAAMBAAAAAAAAAAAAAAAEBQABAwL/xAAkEQACAgIDAAIBBQAAAAAAAAABAgADBBESITEiURMyQWGB0f/aAAwDAQACEQMRAD8A8/ljCwr867ysdCx9T6D3MMDDsz8tKKurdT6KO8fMHCpwMdaaF2A6n1Y9zEU0mw7PkLkZAqGh7MrB8MYtIDZTG9+w5KJrVYWLSNq8epfZBJ4Sgtar4JJe13/UZG+NRYNnprYfqoMzsvw9gZIJSvyH9DX0/ibBrdV4ijAdyJxNlFb0TSu6Ho6iJqej5OnHiccdXpYvT59pnT0uxFsRksUMrDYgjkYk67pJ07ID17nHsP3T+U9oC+jh8l8lTGyvyfFvZlQhCFjY4+FsIUYH2hh8S87+yjpGinS8q6pbEVeFhuN2mdi1irFqrHREC/SN+nf2FH7BKNjGmsBZIqQZFrFovWYGRXkLQVDWMNwFO/KbGFplWIvm3lWsHPc9FkuVh2WZC5GPb5doHCdxuCJyMB7mDZt5t26IvJZye7mo2dRCY4rY6Xf19SejKx8oulTh+HqNpDkaTi37kJ5bd05fSc5mGV4cjDUJbUPwgcmHaWcTJTLpFicj0ZexnHtRyQzv054WDuY1uh3q3w3R1/XkZi6tgfaMa/EtADdAezDoY9RV1H/IX/uMTRa1m1aCyaVpAZPueVMpVirDYg7EQjXk6LVbk22Efict/JhOBx2ixlJqb1TB6kYdGUGNGLkVUaXVY7jZUG+3X2iN4eyxlaVUN/v1fDYe3T6TXoda70d141Ugle8Y6C5AZPrsNFhH9Riq1HisRbqHpWz8DN0Muykr4uqY/MDfmArHmDIqci7A2py1LVDYLco5D3gSm/Bo/UpLYV7Y7B/f/ZpzNy6nwrzmY43Q/wBVB6/rNGV8nNx8cL5rjZ+m3Oeayd9Dc92hSuydfzJarUtqWxGBVhyMWNRIOfeQdxxGRXOGsby9xXxEqpPSQX3JRQ91h2VFLGPqpFZLbku/INwC6lC3PqS11LjdWIhEq7IsuvstLEF2LH5mEOckxYwhrsy7oepHTszd9/Js5WD/AH8o8o6ugdGDKw3BHqJ5pNbSNcu074dgNuP+Xfmvt/yaov4fFvJmVjfk+S+x5qtemwWVsVYdCJbv1O7IxhRaARuOJh1aZGHqOLnJvj2qx9VPJh8pajuKvppN5Om18l7I1a+0/CJqTh4eEHf6yjCRX5FONWXvsWtR6sdptVVB11NM72Hs7ksVfE+qiw/YaG3UH4pHqe0NW8Sm1WpwN1U8jaeRPt2i51g77wRxWUMXFIPN4QhCClGEIQmTJ9BKkFSQR0IjFouVkPX9++1vdyYQisb2Cy/BLupZFyUsUusU7ejERSttstcta7O3djuYQnvJ8nPD9nEIQgpRhCEJkyf/2Q=='
+        //   },
+        //   expectation: '342423',
+        //   motivation: 'sasadweqw',
+        //   language: [ 'wqoij', 'kjhjad', 'oiuhi' ],
+        //   name: 'wqiugiq',
+        //   tel: '28764287t',
+        //   gender: '0',
+        //   email: 'awdwqd@qq.com',
+        //   birthday: '',
+        //   education: '',
+        //   nationality: '',
+        //   paypalAccount: '',
+        //   disc: '["1","0","0","3","3","0","3","0","1","2","0","2","2","2","2","1","2","3","2","2","3","3","2","3","2","2","2","0","1","3","2","1","0","2","3","0","1","1","1","2"]'
+        // }
+        request(ajaxSendata, data => {
+
+            step = 2;
+            setEcharts(data);
+            // data.name+'--'
+            showStep();
+            console.log()
+          },err => {
+            layer.open({
+                content: err.message || '提交错误',
+                skin: 'msg',
+                time: 3
+            });
+        });
+        // doms.forE
+        // doms.forEach(function(el, idx){
+        //   console.log(el)
+        //   // var asl = $(el).find('input:radio:checked').val();
+        //   // console.log(asl);
+        //   // arrList.push(asl)
+        // })
+
+        // console.log(arrList);
+      })
+      $('.stepOne .addjy').click(function(){
+        getSunlineTpIptVal($('.schoolwarp .school'), true);
+        getSunlineTpIptVal($('.schoolwarp .education'), true);
+        getSunlineTpIptVal($('.schoolwarp .sTimes'), true);
+        getSunlineTpIptVal($('.schoolwarp .eTime'), true);
+        getSunlineTpIptVal($('.schoolwarp .profession'), true);
+        $('.schoolwarp').show();
+      });
+      $('.schoolwarp .cancel').click(function(){
+        $('.schoolwarp').hide();
+      });
+      $('.schoolwarp .submint').click(function(){
+        var school = getSunlineTpIptVal($('.schoolwarp .school'));
+        var education = getSunlineTpIptVal($('.schoolwarp .education'));
+        var sTimes = getSunlineTpIptVal($('.schoolwarp .sTimes'));
+        var eTime = getSunlineTpIptVal($('.schoolwarp .eTimes'));
+        var profession = getSunlineTpIptVal($('.schoolwarp .profession'));
+        if(!school)return layer.open({
+            content: langData.form.schoolError,
+            skin: 'msg',
+            time: 3
+        });
+        if(!education)return layer.open({
+            content: langData.form.educationError,
+            skin: 'msg',
+            time: 3
+        });
+        if(!profession)return layer.open({
+            content: langData.form.professionError,
+            skin: 'msg',
+            time: 3
+        });
+        if(!sTimes)return layer.open({
+            content: langData.form.sTimesError,
+            skin: 'msg',
+            time: 3
+        });
+        if(!eTime)return layer.open({
+            content: langData.form.eTimeError,
+            skin: 'msg',
+            time: 3
+        });
+        schoolData.push({
+          school: school,
+          education: education,
+          sTimes: sTimes,
+          eTime: eTime,
+          profession: profession
+        });
+        ajaxSendata['schoolData'].push(school);
+        ajaxSendata['schoolData'].push(education);
+        ajaxSendata['schoolData'].push(profession);
+        ajaxSendata['schoolData'].push(sTimes+'--'+eTime);
+        $('.stepOne .schoolWarp').html(addschItem(schoolData));
+        $('.schoolwarp').hide();
+      });
+      $('.working .cancel').click(function(){
+        $('.working').hide();
+      });
+      $('.stepOne .addgz').click(function(){
+        getSunlineTpIptVal($('.working .company'), true);
+        getSunlineTpIptVal($('.working .title'), true);
+        getSunlineTpIptVal($('.working .s_company'), true);
+        getSunlineTpIptVal($('.working .e_company'), true);
+        getSunlineTpIptVal($('.working .department'), true);
+        getSunlineTpIptVal($('.working .Report'), true);
+        getSunlineTpIptVal($('.working .subordinates'), true);
+        getSunlineTpIptVal($('.working .responsibilities'), true);
+        $('.working').show();
+      });
+      $('.working .submit').click(function(){
+        var company = getSunlineTpIptVal($('.working .company'));
+        var title = getSunlineTpIptVal($('.working .title'));
+        var e_sTime = getSunlineTpIptVal($('.working .s_company'));
+        var e_eTime = getSunlineTpIptVal($('.working .e_company'));
+        var department = getSunlineTpIptVal($('.working .department'));
+        var Report = getSunlineTpIptVal($('.working .Report'));
+        var subordinates = getSunlineTpIptVal($('.working .subordinates'));
+        var responsibilities = getSunlineTpIptVal($('.working .responsibilities'));
+        if(!company)return layer.open({
+            content: langData.form.companyError,
+            skin: 'msg',
+            time: 3
+        });
+        if(!title)return layer.open({
+            content: langData.form.titleError,
+            skin: 'msg',
+            time: 3
+        });
+        if(!department)return layer.open({
+            content: langData.form.departmentError,
+            skin: 'msg',
+            time: 3
+        });
+        if(!e_sTime)return layer.open({
+            content: langData.form.e_sTimeError,
+            skin: 'msg',
+            time: 3
+        });
+        if(!e_eTime)return layer.open({
+            content: langData.form.e_eTimeError,
+            skin: 'msg',
+            time: 3
+        });
+        if(!responsibilities)return layer.open({
+            content: langData.form.responsibilitiesError,
+            skin: 'msg',
+            time: 3
+        });
+        ajaxSendata['working'].push({
+          company: company,
+          title: title,
+          e_sTime: e_sTime,
+          e_eTime: e_eTime,
+          department: department,
+          responsibilities: responsibilities,
+          Report: Report,
+          subordinates: subordinates
+        });
+        $('.stepOne .workWarp').html(addworkingItem(ajaxSendata['working'], '职责'));
+        $('.working').hide();
+
+        console.log(ajaxSendata)
+      });
+      _addImgFileListener("#uploadimg", function(data) {
+        ajaxSendata['headerImg'] = {
+          type: data.suffix,
+          base64 : data.base64
+        }
+        $("#img").attr("src",data.base64);
+      })
+
+
+    }
+    initDoc();
+  })();
+   // var LangData = getLangData('zh');
+
+
+
+  </script>
+</html>

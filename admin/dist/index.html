@@ -1,0 +1,118 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>FMLI-ADMIN</title><script type=text/javascript src=./static/echarts.min.js></script><script type=text/javascript>function convertCanvasToImage() {
+        var canvas =  document.getElementById('main').getElementsByTagName('canvas')[0];
+      	return canvas.toDataURL("image/png");;
+      }
+      function getMaxNum(list, val){
+        var max = 0;
+        list.forEach(function(el, idx){
+          if(max < el[val] )max = el[val]
+        });
+        return max;
+      }
+      function initEcharts(option){
+        var indicator = [];
+        var fontSize = 12;
+        option.maxNum = option.maxNum - 0 + (option.maxNum/4);
+        option.indicator.forEach(function(el, idx){
+          indicator.push({
+            name: el,
+            color:'#333',
+            max: option.maxNum
+          });
+          // legendData.push()
+        });
+        var options = {
+            title: {},
+            tooltip: {
+              show: false,
+            },
+            legend: {
+              show:true,
+              data: option.indicator
+            },
+            symbolSize:7,
+            symbol:'rect',
+            radar: {
+              radius: ["0%", "60%"],
+              indicator: indicator,
+              textStyle: {
+                color: "rgba(41, 84, 238, 1)",
+                backgroundColor: "rgba(93, 222, 28, 1)",
+                borderColor: "rgba(191, 25, 172, 1)",
+                textBorderColor: "rgba(194, 14, 74, 1)"
+              },
+              splitNumber: 8,
+              nameGap: 8,
+              shape: "polygon",
+              scale: false,
+              axisLine: {
+                lineStyle: {
+                  color: "#DDD",
+                  type: "solid"
+                }
+              },
+              axisTick: {
+                show: true,
+                lineStyle: {
+                  type: "dotted"
+                }
+              },
+              axisLabel: {
+                showMinLabel: true,
+                showMaxLabel: true,
+                color: "rgba(7, 248, 51, 1)",
+                backgroundColor: "rgba(0, 3, 190, 1)",
+                borderColor: "rgba(15, 225, 103, 1)"
+              },
+              splitArea: {
+                show: true,
+                areaStyle: {
+                  color:['#fff','#fff']
+                }
+              },
+              name:{
+                formatter:function(val){
+                  var strs = val.split(''); //字符串数组
+                  var str = '';
+                  var num = 100;
+                  for(var i = 0, s; s = strs[i++];) { //遍历字符串数组
+                  str += s;
+                  if(!(i % num)) str += '\n'; //按需要求余
+                  }
+                  return str
+                },
+                textStyle: {
+                    fontSize: fontSize
+                }
+              }
+            },
+            series: [{
+              name: "预算 vs 开销（Budget vs spending）",
+              type: "radar",
+              lineStyle:{
+                color: '#e8610f'
+              },
+              areaStyle: {
+                color: '#e8610f',
+
+              },
+              symbol:'diamond',
+              label:{
+                show: true,
+                position: 'outside',
+                color: '#333'
+              },
+              data: [{
+                value: option.data,
+                // symbolSize: 0,
+              }]
+            }]
+          }
+        echarts.init(document.getElementById('main')).setOption(options);
+
+
+      }</script><style media=screen>#main{
+        display: none;
+        width: 600px;
+        height: 400px;
+      }</style><link href=./static/css/app.687dd8c6c45e0ddf9cef3f277372ad15.css rel=stylesheet></head><body><div id=app></div><div class="" id=main></div><script type=text/javascript src=./static/js/manifest.ae5fbdf404d33ee639c0.js></script><script type=text/javascript src=./static/js/vendor.b12f46c55fa02e0133b6.js></script><script type=text/javascript src=./static/js/app.00a698d18b9aaa901da3.js></script></body></html>
